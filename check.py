@@ -11,3 +11,7 @@ class Check:
         self.accountNumber = accountNumber
         self.date = date
         self.finalDate = None
+
+
+        def Computes():
+            pass

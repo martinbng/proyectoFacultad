@@ -4,5 +4,17 @@ from user import User
 
 class Acccount:
     def __init__(self):
-        checks = Check[]
-        users = User[]
+        self.checks = Check[]
+        self.users = User[]
+
+    
+    def LocalMovement():
+        pass
+
+
+    def LocalChecks():
+        pass
+
+
+    def LocalGraph():
+        pass
