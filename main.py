@@ -1,11 +1,11 @@
-from account import account
+from account import Account
 from user import User
 
 
 class Main:
     def __init__(self):
-       self.accounts = Account[]
-       self.users = User[]
+       self.accounts = []
+       self.users = []
 
 
     def GlobalMovement():
