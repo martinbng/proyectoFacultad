@@ -2,7 +2,7 @@ from entity import Entity
 
 
 class Check:
-    def __init(self, signature, memo, ammount, accountNumber, date, finalDate:
+    def __init(self, signature, memo, ammount, accountNumber, date, finalDate):
         self.drawer = []               
         self.extensions = []         
         self.signature = signature

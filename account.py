@@ -8,13 +8,13 @@ class Account:
         self.users = []
 
     
-    def LocalMovement():
+   def LocalMovement():
         pass
 
 
-    def LocalChecks():
+   def LocalChecks():
         pass
 
 
-    def LocalGraph():
+   def LocalGraph():
         pass
