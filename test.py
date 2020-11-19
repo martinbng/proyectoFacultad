@@ -17,3 +17,6 @@ Carlo = User('Carlo_Kpo','55kapo')
 Jose = User('Jose_ok','jose44')
 Lautaro = User('Lauta','contraseña')
 
+
+#registrando un usuario
+admin.userRegister(Juan)
