@@ -1,5 +1,8 @@
+from check import Check
+from user import User
 
 
 class Acccount:
     def __init__(self):
-        pass
+        checks = Check[]
+        users = User[]

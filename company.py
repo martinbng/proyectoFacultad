@@ -1,4 +1,5 @@
 
 
 class Company:
-    pass
+    def __init(self, businessName):
+        self.businessName = businessName
