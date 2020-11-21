@@ -10,11 +10,16 @@ class Main:
 
     #Modulos para administrar el sistema
 
-        #REGISTRA USUARIOS
+    #REGISTRA USUARIOS
     def userRegister(self, user):
         if isinstance(user, User):
             self.users.append(user)
 
+
+    def accountRegister(self, account):
+        if isinstance(account, Account):
+            self.accounts.append(account)
+            
 
     #Modulos de los requerimientos
 

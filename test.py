@@ -19,11 +19,13 @@ Lautaro = User('Lauta','contraseña')
 
 
 #registrando usuarios
-admin.userRegister(Juan)
-admin.userRegister(Pepe)
-admin.userRegister(Carlo)
-admin.userRegister(Jose)
-admin.userRegister(Lautaro)
+cuenta.userRegister(Juan)
+cuenta.userRegister(Pepe)
+cuenta.userRegister(Carlo)
+cuenta.userRegister(Jose)
+cuenta.userRegister(Lautaro)
 
 
-print(f'Usuario : ' + Juan.username + ' y su contraseña: ' + Juan.password)
+#registrando cuentas
+admin.accountRegister(Juan)
+print(cuenta)
