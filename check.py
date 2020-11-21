@@ -12,6 +12,12 @@ class Check:
         self.date = date
         self.finalDate = None
     
+    
+    #mostrando el cheque
+    def __str__(self):
+        if self.drawer != None:
+            return self.drawer.name + 'Apellido: ' + self.drawer.surname
+
 
     def computes():
         pass

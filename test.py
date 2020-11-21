@@ -18,5 +18,12 @@ Jose = User('Jose_ok','jose44')
 Lautaro = User('Lauta','contraseña')
 
 
-#registrando un usuario
+#registrando usuarios
 admin.userRegister(Juan)
+admin.userRegister(Pepe)
+admin.userRegister(Carlo)
+admin.userRegister(Jose)
+admin.userRegister(Lautaro)
+
+
+print(f'Usuario : ' + Juan.username + ' y su contraseña: ' + Juan.password)
