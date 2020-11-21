@@ -28,4 +28,6 @@ cuenta.userRegister(Lautaro)
 
 #registrando cuentas
 admin.accountRegister(Juan)
+admin.accountRegister(Pepe)
+
 print(cuenta)

@@ -15,9 +15,10 @@ class Account:
 
    def __str__(self):
         if self.users != None:
-             return users[1]
+             for elements in range(len(self.users)):
+                  return str(self.users[elements])
 
-             
+            
    def LocalMovement():
         pass
 
