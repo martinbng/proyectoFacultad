@@ -13,6 +13,11 @@ class Account:
              self.users.append(user)#carga en la lista de usuarios al nuevo "user"
 
 
+   def checkRegister(self, check):
+        if isinstance(check, Check):
+             self.checks.append(check)
+
+
    def LocalMovement():
         pass
 

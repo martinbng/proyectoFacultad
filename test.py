@@ -1,6 +1,8 @@
 from main import Main
 from account import Account
 from user import User
+from check import Check
+
 
 #creando la administración
 admin = Main()
@@ -8,6 +10,10 @@ admin = Main()
 
 #creando usuarios
 cuenta = Account()
+
+
+#cheque
+cheque = Check()
 
 
 Martin = User('Martin','1234contraseña')
@@ -30,4 +36,7 @@ cuenta.userRegister(Lautaro)
 admin.accountRegister(Juan)
 admin.accountRegister(Pepe)
 
+
+#creando cheques
+cuenta.checkRegister('sda','as')
 
