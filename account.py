@@ -13,12 +13,6 @@ class Account:
              self.users.append(user)#carga en la lista de usuarios al nuevo "user"
 
 
-   def __str__(self):
-        if self.users != None:
-             for elements in range(len(self.users)):
-                  return str(self.users[elements])
-
-            
    def LocalMovement():
         pass
 
