@@ -16,6 +16,10 @@ class Main:
             self.accounts.append(account)
  
 
+    def __str__(self):
+        return str(self.accounts)
+
+        
     #Modulos de los requerimientos
     def GlobalMovement():
         pass

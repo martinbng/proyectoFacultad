@@ -9,34 +9,43 @@ admin = Main()
 
 
 #creando usuarios
-cuenta = Account()
+c1 = Account()
+c2 = Account()
+c3 = Account()
+c4 = Account()
+c5 = Account()
+c6 = Account()
 
 
 #cheque
 cheque = Check()
 
 
-Martin = User('Martin','1234contraseña')
-Juan = User('Junito','123juanito')
-Pepe = User('Pepe12','contraseñaFacil')
-Carlo = User('Carlo_Kpo','55kapo')
-Jose = User('Jose_ok','jose44')
-Lautaro = User('Lauta','contraseña')
+usr1 = User('Martin','1234contraseña')
+usr2 = User('Junito','123juanito')
+usr3 = User('Pepe12','contraseñaFacil')
+usr4 = User('Carlo_Kpo','55kapo')
+usr5 = User('Jose_ok','jose44')
+usr6 = User('Lauta','contraseña')
 
 
 #registrando usuarios
-cuenta.userRegister(Juan)
-cuenta.userRegister(Pepe)
-cuenta.userRegister(Carlo)
-cuenta.userRegister(Jose)
-cuenta.userRegister(Lautaro)
+c1.userRegister(usr1)
+c2.userRegister(usr2)
+c3.userRegister(usr3)
+c4.userRegister(usr4)
+c5.userRegister(usr5)
+c6.userRegister(usr6)
+
 
 
 #registrando cuentas
-admin.accountRegister(Juan)
-admin.accountRegister(Pepe)
+admin.accountRegister(c1)
+admin.accountRegister(c2)
+admin.accountRegister(c3)
+admin.accountRegister(c4)
+admin.accountRegister(c5)
+admin.accountRegister(c6)
 
 
-#creando cheques
-cuenta.checkRegister('sda','as')
-
+print(str(admin.accounts))

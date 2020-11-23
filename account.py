@@ -18,6 +18,10 @@ class Account:
              self.checks.append(check)
 
 
+   def __str__(self):
+        return str(self.users)
+
+
    def LocalMovement():
         pass
 
