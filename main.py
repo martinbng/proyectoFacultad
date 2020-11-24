@@ -5,8 +5,7 @@ from user import User
 class Main:
     def __init__(self):
        self.accounts = []
-       self.users = []
-
+       "self.user = user"
 
     #Modulos para administrar el sistema
 
@@ -17,9 +16,13 @@ class Main:
  
 
     def __str__(self):
-        return str(self.accounts)
+        c = ''
+        for elements in range(len(self.accounts)):
+            c += str(self.accounts[elements]) + '\n'
 
-        
+        return c
+
+    
     #Modulos de los requerimientos
     def GlobalMovement():
         pass

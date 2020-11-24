@@ -3,14 +3,9 @@ from user import User
 
 
 class Account:
-   def __init__(self):
+   def __init__(self, user):
         self.checks = []
-        self.users = []
-
-    
-   def userRegister(self, user):#toma el parametro "user" de la instancia
-        if isinstance(user, User):#Verifica que el parametro "user" sea instanciable en User
-             self.users.append(user)#carga en la lista de usuarios al nuevo "user"
+        self.user = user
 
 
    def checkRegister(self, check):
@@ -19,7 +14,7 @@ class Account:
 
 
    def __str__(self):
-        return str(self.users)
+        return str(self.user)
 
 
    def LocalMovement():
