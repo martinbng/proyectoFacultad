@@ -14,7 +14,12 @@ class Account:
 
 
    def __str__(self):
-        return str(self.user)
+        chain = ''
+
+        for i in range(len(self.checks)):
+             chain += str(self.checks[i]) + '\n'
+
+        return chain
 
 
    def LocalMovement():

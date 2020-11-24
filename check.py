@@ -2,27 +2,22 @@ from entity import Entity
 
 
 class Check:
-    def __init__(self, signature, memo, ammount, accountNumber, date, finalDate):
-        self.drawer = []               
-        self.extension = []         
+    def __init__(self, signature, memo , ammount, accountNumber, date, drawer, extension):
+        self.drawer = drawer            
+        self.extension = extension         
         self.signature = signature
-        self.memo = None
+        self.memo = memo
         self.ammount = ammount
         self.accountNumber = accountNumber
-        self.date = date
-        self.finalDate = None
+        "self.date = date"
+        "self.finalDate = finalDate"
 
 
-    #Agrega un librador a la lista
-    def registerDrawer(self, librador):
-        if isinstance(librador, Entity):
-            self.drawer.append(librador)
-
-
-    def registerExtension(self, recibidor):
-        if isinstance(recibidor, Entity):
-            self.extension.append(recibidor)
-
+    def __str__(self):
+        return 'Librador: ' + str(self.drawer) + ' Destinatario: ' + str(self.extension) + \
+        ' Firma: ' + self.signature + ' Motivo: ' + self.memo + ' Cantidad: ' + \
+         str(self.ammount) + ' Numero de cuenta: ' + self.accountNumber
+    
 
     def computes():
         pass
