@@ -48,3 +48,6 @@ futuro = datetime.now() + timedelta(days=15)
 
 print(ch1.computes(futuro))
 print(ch1.tag)
+
+ch1.report('extraviado')
+print(ch1.tag)

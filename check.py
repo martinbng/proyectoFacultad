@@ -32,3 +32,14 @@ class Check:
             self.tag = self.tags[0]
         elif dif.days < 15:
             print(f'El cheque aún no ha vencido le faltan [{dif.days}] días para caducar')
+
+    #Si cheque fue robado o extraviado
+    def report(self, answer):
+        answer.lower()
+        answer.capitalize()
+        if answer not in self.tags:
+            raise ValueError('%s no es una respuesta valida' %answer)
+        else:
+            self.tag = answer
+
+
