@@ -44,5 +44,7 @@ c2.checkRegister(ch5)
 admin.accountRegister(c1)
 admin.accountRegister(c2)
 
+futuro = datetime.now() + timedelta(days=15)
 
-print(ch1.computes(datetime.now()))
+print(ch1.computes(futuro))
+print(ch1.tag)

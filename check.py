@@ -5,17 +5,18 @@ from entity import Entity
 
 class Check:
     tags = ('Caducado','Extraviado','Robado')
-    def __init__(self, signature, memo , ammount, accountNumber, drawer, extension):
-        self.tags = None
+    expires = 15
+
+    def __init__(self, signature, memo , ammount, accountNumber, drawer, extension, tag = ''):
+        self.tag = tag
         self.drawer = drawer            
         self.extension = extension         
         self.signature = signature
         self.memo = memo
         self.ammount = ammount
         self.accountNumber = accountNumber
-        hoy = datetime.now() #Toma la hora actual de la pc
-        self.finalDate = hoy + timedelta(days = 15)
-
+        self.initialDate = datetime.now() #Toma la hora actual de la pc
+        
 
     def __str__(self):
         return 'Librador: ' + str(self.drawer) + ' Destinatario: ' + str(self.extension) + \
@@ -24,17 +25,10 @@ class Check:
     
 
     def computes(self, finalDate):
-        pcTime = datetime.now()
+        dif = finalDate - self.initialDate
 
-
-        if pcTime < finalDate:
-            print('Quedan ' + finalDate - pcTime + ' dias antes que el cheque caduque')
-        elif pcTime > finalDate:
-            print('El cheque ha caducado con ' + finalDate.days() - pcTime.days() + ' dias de diferencia')
-            self.tag = tags[0]
-        elif pcTime == finalDate:
-            print('El cheque caduda hoy')
-            self.tag = tags[0]
-
-
-
+        if dif.days >= 15:
+            print(f'El cheque ha vencido con [{dif.days}] días')
+            self.tag = self.tags[0]
+        elif dif.days < 15:
+            print(f'El cheque aún no ha vencido le faltan [{dif.days}] días para caducar')
