@@ -6,7 +6,7 @@ from entity import Entity
 class Check:
     tags = ('Caducado','Extraviado','Robado')
     def __init__(self, signature, memo , ammount, accountNumber, drawer, extension):
-        self.tag = None
+        self.tags = None
         self.drawer = drawer            
         self.extension = extension         
         self.signature = signature
