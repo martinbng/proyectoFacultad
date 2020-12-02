@@ -67,3 +67,7 @@ print(admin.GlobalMovement())
 
 #muestra los movimientos para una cuenta
 print(c1.LocalMovement())
+
+
+#muestra usuarios principales
+print(admin.MainIssuers())
