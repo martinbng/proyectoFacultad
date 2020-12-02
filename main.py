@@ -24,8 +24,14 @@ class Main:
 
     
     #Modulos de los requerimientos
-    def GlobalMovement():
-        pass
+    def GlobalMovement(self):
+        accumulate = 0
+
+        for i in range(len(self.accounts)):
+            for j in range(len(self.accounts[i].checks)):
+                accumulate += self.accounts[i].checks[j].ammount
+
+        return f'La cantidad total de dinero enviado en el sistema es de [${accumulate}]'
 
 
     def MainIssuers():

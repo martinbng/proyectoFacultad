@@ -33,6 +33,7 @@ class Check:
         elif dif.days < 15:
             print(f'El cheque aún no ha vencido le faltan [{dif.days}] días para caducar')
 
+
     #Si cheque fue robado o extraviado
     def report(self, answer):
         answer = answer.lower()

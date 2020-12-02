@@ -52,5 +52,18 @@ print(ch1.tag)
 ch1.report('extraviado')
 print(ch1.tag)
 
+#muestra total de cheques y usuarios en el sistema
 print(admin.TotalIssuers())
 print(admin.GlobalChecks())
+
+
+#Muestra la cantidad de cheques para una cuenta en especifico
+print(c1.LocalChecks())
+
+
+#muestra movimientos del sistema
+print(admin.GlobalMovement())
+
+
+#muestra los movimientos para una cuenta
+print(c1.LocalMovement())

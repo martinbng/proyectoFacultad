@@ -22,12 +22,22 @@ class Account:
         return chain
 
 
-   def LocalMovement():
-        pass
+   def LocalMovement(self):
+        accumulate = 0
+
+        for elements in range(len(self.checks)):
+             accumulate += self.checks[elements].ammount
+
+        return f'La cantidad de dinero que ha enviado [{self.user}] fue un total de: [${accumulate}]'
 
 
-   def LocalChecks():
-        pass
+   def LocalChecks(self,):
+        cont = 0
+
+        for i in range(len(self.checks)):
+             cont += 1
+          
+        return f'Cantidad de cheques en la cuenta de [{self.user}] son: [{cont}]'
 
 
    def LocalGraph():
