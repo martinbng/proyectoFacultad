@@ -71,3 +71,6 @@ print(c1.LocalMovement())
 
 #muestra usuarios principales
 print(admin.MainIssuers())
+
+
+grafico = admin.GlobalGraph()
