@@ -51,3 +51,6 @@ print(ch1.tag)
 
 ch1.report('extraviado')
 print(ch1.tag)
+
+print(admin.TotalIssuers())
+print(admin.GlobalChecks())

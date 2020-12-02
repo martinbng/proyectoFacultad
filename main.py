@@ -32,12 +32,23 @@ class Main:
         pass
 
     
-    def TotalIssuers():
-        pass
+    def TotalIssuers(self):
+        cont = 0
+        for i in range(len(self.accounts)):
+            cont += 1
+        
+        return f'Cantidad total de usuarios/ cuentas en el sistema [{cont}]'
 
 
-    def GlobalChecks():
-        pass
+
+    def GlobalChecks(self):
+        cont = 0
+        
+        for i in range(len(self.accounts)):
+            for j in range(len(self.accounts[i].checks)):
+                cont += 1
+        
+        return f'Cantidad total de cheques en el sistema [{cont}]'
 
 
     def GlobalDrawerType():

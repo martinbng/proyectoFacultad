@@ -35,8 +35,8 @@ class Check:
 
     #Si cheque fue robado o extraviado
     def report(self, answer):
-        answer.lower()
-        answer.capitalize()
+        answer = answer.lower()
+        answer = answer.capitalize()
         if answer not in self.tags:
             raise ValueError('%s no es una respuesta valida' %answer)
         else:
