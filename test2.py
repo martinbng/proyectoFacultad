@@ -31,6 +31,7 @@ ch3 = Check('Mi firma','Envio de dinero para comprar un celular', 45000,'1234', 
 ch4 = Check('Firmado','Envio de dinero para vacaciones',12000,'133',p3,p4)
 ch5 = Check('Firmado','Envio de dinero para comprar auto',1200000,'133', p3, p4)
 
+
 c1 = Account(usr1)
 c1.checkRegister(ch1)
 c1.checkRegister(ch2)
@@ -73,4 +74,3 @@ print(c1.LocalMovement())
 print(admin.MainIssuers())
 
 
-grafico = admin.GlobalGraph()

@@ -77,7 +77,11 @@ class Main:
 
 
     def GlobalDrawerType(self):
-        pass
+       if isinstance(i, Person):
+           pass
+        #es de tipo empresa
+        else:
+            pass
 
 
     def GlobalGraph(self):

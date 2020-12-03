@@ -15,6 +15,7 @@ class Check:
         self.memo = memo
         self.ammount = ammount
         self.accountNumber = accountNumber
+        #agregar numero de cheques para una cuenta
         self.initialDate = datetime.now() #Toma la hora actual de la pc
         
 
