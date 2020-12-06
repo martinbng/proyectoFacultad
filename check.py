@@ -7,16 +7,15 @@ class Check:
     tags = ('Caducado','Extraviado','Robado')
     expires = 15
     idCheck = 0
-    def __init__(self, signature, memo , ammount, accountNumber, drawer, extension, tag = ''):
+    def __init__(self, signature, memo , ammount, drawer, extension):
         Check.idCheck += 1
         self.id = Check.idCheck
-        self.tag = tag
+        self.tag = ''
         self.drawer = drawer            
         self.extension = extension         
         self.signature = signature
         self.memo = memo
         self.ammount = ammount
-        self.accountNumber = accountNumber
         #agregar numero de cheques para una cuenta
         self.initialDate = datetime.now() #Toma la hora actual de la pc
         
@@ -24,7 +23,7 @@ class Check:
     def __str__(self):
         return 'Librador: ' + str(self.drawer) + ' Destinatario: ' + str(self.extension) + \
         ' Firma: ' + self.signature + ' Motivo: ' + self.memo + ' Cantidad: ' + \
-         str(self.ammount) + ' Numero de cuenta: ' + self.accountNumber
+         str(self.ammount)
     
 
     def computes(self, finalDate):

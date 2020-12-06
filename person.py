@@ -2,11 +2,10 @@ from entity import Entity
 
 
 class Person(Entity):
-    def __init__(self, name, surname, person_address, person_Id):
-        super().__init__(person_address, person_Id)
+    def __init__(self, name, surname, person_address):
+        super().__init__(person_address)
         self.name = name
-        self.surname = surname
 
     
     def __str__(self):
-        return self.name + self.surname 
+        return self.name 

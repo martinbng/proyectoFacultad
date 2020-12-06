@@ -1,6 +1,8 @@
 
 
 class Entity:
-    def __init__(self, address,Id):
+    idEntity = 0
+    def __init__(self, address):
+        Entity.idEntity += 1
         self.addres = address
-        self.Id = Id
+        self.id = Entity.idEntity
