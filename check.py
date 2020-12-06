@@ -7,9 +7,10 @@ class Check:
     tags = ('Caducado','Extraviado','Robado')
     expires = 15
     idCheck = 0
-    def __init__(self, signature, memo , ammount, drawer, extension):
+    def __init__(self, signature, memo , ammount, drawer, extension, accountId = None):
         Check.idCheck += 1
         self.id = Check.idCheck
+        self.accountId = accountId
         self.tag = ''
         self.drawer = drawer            
         self.extension = extension         
@@ -23,8 +24,13 @@ class Check:
     def __str__(self):
         return 'Librador: ' + str(self.drawer) + ' Destinatario: ' + str(self.extension) + \
         ' Firma: ' + self.signature + ' Motivo: ' + self.memo + ' Cantidad: ' + \
-         str(self.ammount)
+         str(self.ammount) + ' Numero de cheque: ' + str(self.id) + ' Numero de cuenta: c' +\
+         str(self.accountId)
     
+    
+    def defineID(self,ID):
+        self.accountId = ID
+
 
     def computes(self, finalDate):
         dif = finalDate - self.initialDate
