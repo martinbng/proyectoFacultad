@@ -6,8 +6,10 @@ from entity import Entity
 class Check:
     tags = ('Caducado','Extraviado','Robado')
     expires = 15
-
+    idCheck = 0
     def __init__(self, signature, memo , ammount, accountNumber, drawer, extension, tag = ''):
+        Check.idCheck += 1
+        self.id = Check.idCheck
         self.tag = tag
         self.drawer = drawer            
         self.extension = extension         

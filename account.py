@@ -3,7 +3,10 @@ from user import User
 
 
 class Account:
+    idAccount = 0
    def __init__(self, user):
+        Account.idAccount += 1
+        self.id = Account.idAccount
         self.checks = []
         self.user = user
 
