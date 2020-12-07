@@ -1,5 +1,11 @@
 from account import Account
 from user import User
+from person import Person
+from company import Company
+
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 class Main:
@@ -53,32 +59,45 @@ class Main:
     
 
     def TotalIssuers(self):
-        cont = 0
         names = ''
-
         for i in range(len(self.accounts)):
             names += str(self.accounts[i].user) + ', ' 
-            cont += 1
-        
-        return f'Cantidad total de usuarios/ cuentas en el sistema [{cont}] y los nombres son: \n {names}'
+
+        return f'Cantidad total de usuarios/ cuentas en el sistema [{len(self.accounts)}] y los nombres son: \n {names}'
 
 
     def GlobalChecks(self):
         cont = 0
         
         for i in range(len(self.accounts)):
-            for j in range(len(self.accounts[i].checks)):
-                cont += 1
+            cont += len(self.accounts[i].checks)
         
-        return f'Cantidad total de cheques en el sistema [{cont}]'
+        return cont
 
 
     def GlobalDrawerType(self):
-       if isinstance(i, Person):
-           pass
-        #es de tipo empresa
+        cont = [0,0]
+        for i in range(len(self.accounts)):
+            for j in range(len(self.accounts[i].checks)):
+                if isinstance(self.accounts[i].checks[j].drawer, Person):
+                    cont[0] +=1
+                elif isinstance(self.accounts[i].checks[j].drawer, Company):
+                    cont[1] +=1
+        
+        return f'Hay [{cont[0]}] de libradores del tipo Persona y [{cont[1]}] del tipo Compañia'
         
 
-
     def GlobalGraph(self):
-        pass
+        name = [0,0]
+        for i in range(len(self.accounts)):
+            name[i] = self.accounts[i].user
+
+        y_pos = np.arange(len(name))
+        performance = [len(self.accounts[0].checks),len(self.accounts[1].checks)]
+
+        plt.bar(y_pos, performance, align = 'center', alpha = 0.5)
+        plt.xticks(y_pos, name)
+        plt.ylabel('Cheques')
+        plt.title('Cantidad de cheques por usuarios')
+
+        return plt.show()

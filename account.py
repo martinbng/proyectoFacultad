@@ -34,13 +34,8 @@ class Account:
         return f'La cantidad de dinero que ha enviado [{self.user}] fue un total de: [${accumulate}]'
 
 
-    def LocalChecks(self,):
-        cont = 0
-
-        for i in range(len(self.checks)):
-             cont += 1
-          
-        return f'Cantidad de cheques en la cuenta de [{self.user}] son: [{cont}]'
+    def LocalChecks(self):
+        return f'Cantidad de cheques en la cuenta de [{self.user}] son: [{len(self.checks)}]'
 
 
     def LocalGraph():

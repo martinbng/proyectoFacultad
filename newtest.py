@@ -26,4 +26,5 @@ ch2 = Check('Mi firma','Para cumpleaños',3000,p1,p2)
 c1.checkRegister(ch1)
 c1.checkRegister(ch2)
 
-print(c1)
+print(f'la cantidad de cheques en el sistema es de [{admin.GlobalChecks()}]')
+print(admin.GlobalGraph())

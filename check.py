@@ -1,20 +1,21 @@
 from datetime import datetime, date, time, timedelta
 import calendar
 from entity import Entity
+import hashlib 
 
 
 class Check:
     tags = ('Caducado','Extraviado','Robado')
     expires = 15
     idCheck = 0
-    def __init__(self, signature, memo , ammount, drawer, extension, accountId = None):
+    def __init__(self, memo , ammount, drawer, extension, accountId = None):
         Check.idCheck += 1
         self.id = Check.idCheck
         self.accountId = accountId
         self.tag = ''
         self.drawer = drawer            
         self.extension = extension         
-        self.signature = signature
+        self.signature = None
         self.memo = memo
         self.ammount = ammount
         #agregar numero de cheques para una cuenta
@@ -51,4 +52,8 @@ class Check:
         else:
             self.tag = answer
 
+
+    def createSignature(self, signature):
+        firma = str(self.drawer)
+        self.signature = hashlib.md5(firma.encode())
 
