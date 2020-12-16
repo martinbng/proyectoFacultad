@@ -38,5 +38,8 @@ class Account:
         return f'Cantidad de cheques en la cuenta de [{self.user}] son: [{len(self.checks)}]'
 
 
+    def GiveID(self):
+        self.checks.accountId = self.id
+
     def LocalGraph():
         pass

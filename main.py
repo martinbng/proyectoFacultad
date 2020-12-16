@@ -88,7 +88,8 @@ class Main:
         
 
     def GlobalGraph(self):
-        name = [0,0]
+        name = [0,0,0]
+        
         for i in range(len(self.accounts)):
             name[i] = self.accounts[i].user
 

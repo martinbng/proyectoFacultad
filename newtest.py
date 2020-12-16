@@ -20,11 +20,11 @@ admin.accountRegister(c2)
 p1 = Person('Martin','Borges','Av. de las americas')
 p2 = Person('Pepe','Ramiresz','Av. Jose Ing')
 
-ch1 = Check('Mi forma','Para navidad',2000,p1,p2)
-ch2 = Check('Mi firma','Para cumpleaños',3000,p1,p2)
+ch1 = Check('Para navidad',2000,p1,p2)
+ch2 = Check('Para cumpleaños',3000,p1,p2)
 
 c1.checkRegister(ch1)
 c1.checkRegister(ch2)
 
 print(f'la cantidad de cheques en el sistema es de [{admin.GlobalChecks()}]')
-print(admin.GlobalGraph())
+print(ch1.accountId)

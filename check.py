@@ -8,10 +8,10 @@ class Check:
     tags = ('Caducado','Extraviado','Robado')
     expires = 15
     idCheck = 0
-    def __init__(self, memo , ammount, drawer, extension, accountId = None):
+    def __init__(self, memo , ammount, drawer, extension):
         Check.idCheck += 1
         self.id = Check.idCheck
-        self.accountId = accountId
+        self.accountId = 0
         self.tag = ''
         self.drawer = drawer            
         self.extension = extension         
