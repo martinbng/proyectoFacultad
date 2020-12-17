@@ -34,8 +34,7 @@ class Main:
         accumulate = 0
 
         for i in range(len(self.accounts)):
-            for j in range(len(self.accounts[i].checks)):
-                accumulate += self.accounts[i].checks[j].ammount
+            accumulate += self.accounts[i].GiveAccountAmmount()
 
         return f'La cantidad total de dinero enviado en el sistema es de [${accumulate}]'
 
@@ -70,7 +69,7 @@ class Main:
         cont = 0
         
         for i in range(len(self.accounts)):
-            cont += len(self.accounts[i].checks)
+            cont += self.accounts[i].GiveQuantityOfChecks()
         
         return cont
 
@@ -88,15 +87,17 @@ class Main:
         
 
     def GlobalGraph(self):
-        name = [0,0,0]
-        
+        name = []
+        performance = []
         for i in range(len(self.accounts)):
-            name[i] = self.accounts[i].user
+            name.append(self.accounts[i].user) 
 
         y_pos = np.arange(len(name))
-        performance = [len(self.accounts[0].checks),len(self.accounts[1].checks)]
+        for i in range(len(self.accounts)):
+            #performance.append(len(self.accounts[i].checks))
+            performance.append(self.accounts[i].GiveQuantityOfChecks())
 
-        plt.bar(y_pos, performance, align = 'center', alpha = 0.5)
+        plt.bar(y_pos, performance, align = 'center', alpha = 0.5, color = 'red')
         plt.xticks(y_pos, name)
         plt.ylabel('Cheques')
         plt.title('Cantidad de cheques por usuarios')

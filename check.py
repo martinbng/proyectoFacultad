@@ -8,17 +8,16 @@ class Check:
     tags = ('Caducado','Extraviado','Robado')
     expires = 15
     idCheck = 0
-    def __init__(self, memo , ammount, drawer, extension):
+    def __init__(self, memo , ammount, drawer, extension,accountId = 0, signature = None):
         Check.idCheck += 1
         self.id = Check.idCheck
-        self.accountId = 0
+        self.accountId = accountId
         self.tag = ''
         self.drawer = drawer            
         self.extension = extension         
-        self.signature = None
+        self.signature = signature
         self.memo = memo
         self.ammount = ammount
-        #agregar numero de cheques para una cuenta
         self.initialDate = datetime.now() #Toma la hora actual de la pc
         
 
@@ -29,6 +28,7 @@ class Check:
          str(self.accountId)
     
     
+    #Toma el ID de la cuenta asociada al cheque
     def defineID(self,ID):
         self.accountId = ID
 
@@ -56,4 +56,11 @@ class Check:
     def createSignature(self, signature):
         firma = str(self.drawer)
         self.signature = hashlib.md5(firma.encode())
+        self.signature = self.signature.hexdigest()
+
+
+    #Envia la cantidad de dinero para un cheque
+    def GiveCheckAmmount(self):
+        return self.ammount
+        
 
