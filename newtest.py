@@ -42,3 +42,9 @@ print(admin.GlobalGraph())
 
 print(f'La cuenta ha emitido un total de {c1.GiveAccountAmmount()}$')
 print(f'La cantidad de dinero emitido en el sistema es de {admin.GlobalMovement()}$')
+
+#si muestro un cheque
+print(ch1)
+
+#si muestro un usuario
+print(usr1)

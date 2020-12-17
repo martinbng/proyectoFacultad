@@ -30,12 +30,7 @@ class Account:
 
 
     def LocalMovement(self):
-        accumulate = 0
-
-        for elements in range(len(self.checks)):
-             accumulate += self.checks[elements].ammount
-
-        return f'La cantidad de dinero que ha enviado [{self.user}] fue un total de: [${accumulate}]'
+        return f'La cantidad de dinero que ha enviado [{self.user}] fue un total de: [${self.GiveAccountAmmount()}]'
 
 
     def LocalChecks(self):

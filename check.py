@@ -25,7 +25,7 @@ class Check:
         return 'Librador: ' + str(self.drawer) + ' Destinatario: ' + str(self.extension) + \
         ' Firma: ' + self.signature + ' Motivo: ' + self.memo + ' Cantidad: ' + \
          str(self.ammount) + ' Numero de cheque: ' + str(self.id) + ' Numero de cuenta: c' +\
-         str(self.accountId)
+         str(self.accountId) + ' Fecha: ' + str(self.initialDate)
     
     
     #Toma el ID de la cuenta asociada al cheque

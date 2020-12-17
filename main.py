@@ -30,6 +30,7 @@ class Main:
 
     
     #Modulos de los requerimientos
+    
     def GlobalMovement(self):
         accumulate = 0
 
