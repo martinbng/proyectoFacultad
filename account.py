@@ -28,11 +28,11 @@ class Account:
 
         return chain
 
-
+    #muestr movimientos locales (para una cuenta)
     def LocalMovement(self):
         return f'La cantidad de dinero que ha enviado [{self.user}] fue un total de: [${self.GiveAccountAmmount()}]'
 
-
+    #muestra la cantidad de cheques para una cuenta
     def LocalChecks(self):
         return f'Cantidad de cheques en la cuenta de [{self.user}] son: [{len(self.checks)}]'
 

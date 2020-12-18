@@ -32,7 +32,7 @@ class Check:
     def defineID(self,ID):
         self.accountId = ID
 
-
+    #calcula si cheque vencio 
     def computes(self, finalDate):
         dif = finalDate - self.initialDate
 
@@ -52,11 +52,11 @@ class Check:
         else:
             self.tag = answer
 
-
+    #funcion que toma el nombre del usuario asociado a la cuenta y crea un hash con ella 
     def createSignature(self, signature):
         firma = str(self.drawer)
         self.signature = hashlib.md5(firma.encode())
-        self.signature = self.signature.hexdigest()
+        self.signature = self.signature.hexdigest()#firma digital
 
 
     #Envia la cantidad de dinero para un cheque

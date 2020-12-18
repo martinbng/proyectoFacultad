@@ -10,7 +10,7 @@ class User:
 
 
     def __str__(self):
-        return self.username
+        return str(self.username)
 
 
     #Toma el ID de la cuenta asociada al usuario, así user sabe que pertenece a una cuenta

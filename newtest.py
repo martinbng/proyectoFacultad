@@ -25,26 +25,38 @@ admin.accountRegister(c4)
 
 p1 = Person('Martin','Borges','Av. de las americas')
 p2 = Person('Pepe','Ramiresz','Av. Jose Ing')
+p3 = Person('ELucas','Rodriguez','AV. andresito 129')
+p4 = Person('Pepe','Sas','Misiones 120')
+
 
 ch1 = Check('Para navidad',2000,p1,p2)
 ch2 = Check('Para cumpleaños',3000,p1,p2)
+ch3 = Check('Para FIESTA',3000,p3,p2)
+ch4 = Check('Para cena',20000,p4,p3)
+
 
 c1.checkRegister(ch1)
 c1.checkRegister(ch2)
 
+c2.checkRegister(ch3)
+c2.checkRegister(ch4)
 
-print(f'la cantidad de cheques en el sistema es de [{admin.GlobalChecks()}]')
-#print(admin.GlobalGraph())
+#Ver movimiento locales
+print(c1.LocalMovement())
 
-#ver la firma
-print(f'La firma para este cheque es: {ch1.signature}')
+#ver movglobar
+print(f'Mov global: {admin.GlobalMovement()}')
+print(' ')
+#Ver cantidad de cheuqes globales
+print(f' La cantidad de chequess en el sistema es {admin.GlobalChecks()}')
+
+
+#polimorfismo
+"""
+print(admin.GlobalOrLocalMovements('globral'))
+print(admin.GlobalOrLocalMovements('local',us1.username))
+print(admin.GlobalOrLocalMovements('ambos',usr2.username))
+"""
+
+#mostrando graficos
 print(admin.GlobalGraph())
-
-print(f'La cuenta ha emitido un total de {c1.GiveAccountAmmount()}$')
-print(f'La cantidad de dinero emitido en el sistema es de {admin.GlobalMovement()}$')
-
-#si muestro un cheque
-print(ch1)
-
-#si muestro un usuario
-print(usr1)
